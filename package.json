@@ -1,0 +1,83 @@
+{
+  "name": "aoh-nuget-intellisense",
+  "displayName": "AOH - NuGet IntelliSense",
+  "description": "NuGet package and version IntelliSense for .NET project files.",
+  "version": "1.0.0",
+  "publisher": "Abyzz",
+  "icon": "media/aoh-logo-icon.png",
+  "license": "WTFPL",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:xml",
+    "onCommand:aoh.nugetIntellisense.refreshSources",
+    "onCommand:aoh.nugetIntellisense.clearCache"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "aoh.nugetIntellisense.refreshSources",
+        "title": "AOH - NuGet IntelliSense: Refresh Sources"
+      },
+      {
+        "command": "aoh.nugetIntellisense.clearCache",
+        "title": "AOH - NuGet IntelliSense: Clear Cache"
+      }
+    ],
+    "configuration": {
+      "title": "AOH - NuGet IntelliSense",
+      "properties": {
+        "aoh.nugetIntellisense.includePrerelease": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include prerelease versions (for example -alpha, -beta, -rc) in package and version IntelliSense."
+        },
+        "aoh.nugetIntellisense.cacheMinutes": {
+          "type": "number",
+          "default": 10,
+          "minimum": 0,
+          "maximum": 1440,
+          "description": "How long package search and version results are cached."
+        },
+        "aoh.nugetIntellisense.maxPackageResults": {
+          "type": "number",
+          "default": 40,
+          "minimum": 5,
+          "maximum": 100,
+          "description": "Maximum package completion results per feed."
+        },
+        "aoh.nugetIntellisense.minSearchCharacters": {
+          "type": "number",
+          "default": 2,
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Minimum characters before querying package search endpoints."
+        },
+        "aoh.nugetIntellisense.additionalSources": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "description": "Additional NuGet v3 service-index URLs."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.7.2"
+  }
+}
