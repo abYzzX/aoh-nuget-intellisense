@@ -2,9 +2,9 @@
   "name": "aoh-nuget-intellisense",
   "displayName": "AOH - NuGet IntelliSense",
   "description": "NuGet package and version IntelliSense for .NET project files.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "Abyzz",
-  "icon": "media/aoh-logo-icon.png",
+  "icon": "media/aoh-nuget-icon.png",
   "license": "WTFPL",
   "engines": {
     "vscode": "^1.96.0"
