@@ -1,0 +1,38 @@
+next-version: 0.1.0
+
+mode: ContinuousDelivery
+
+tag-prefix: '[vV]?'
+
+commit-message-incrementing: Enabled
+
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)'
+
+branches:
+  master:
+    regex: ^master$
+    label: ''
+    increment: None
+    is-main-branch: true
+    mode: ContinuousDeployment
+
+    prevent-increment:
+      of-merged-branch: false
+      when-current-commit-tagged: true
+
+  feature:
+    regex: ^features?[/-](?<BranchName>.+)
+    label: '{BranchName}'
+    increment: Inherit
+    source-branches:
+      - master
+
+  fix:
+    regex: ^(fix|bugfix)[/-](?<BranchName>.+)
+    label: '{BranchName}'
+    increment: Inherit
+    source-branches:
+      - master

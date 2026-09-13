@@ -2,10 +2,18 @@
   "name": "aoh-nuget-intellisense",
   "displayName": "AOH - NuGet IntelliSense",
   "description": "NuGet package and version IntelliSense for .NET project files.",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "publisher": "Abyzz",
   "icon": "media/aoh-nuget-icon.png",
-  "license": "WTFPL",
+  "license": "MIT",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/Abyzz/aoh-nuget-intellisense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abyzz/aoh-nuget-intellisense/issues"
+  },
+  "homepage": "https://github.com/Abyzz/aoh-nuget-intellisense#readme",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -73,7 +81,8 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test out/test/xmlContext.test.js out/test/nugetConfig.test.js out/test/versionUtils.test.js"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
