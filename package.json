@@ -2,18 +2,18 @@
   "name": "aoh-nuget-intellisense",
   "displayName": "AOH - NuGet IntelliSense",
   "description": "NuGet package and version IntelliSense for .NET project files.",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "publisher": "AbYzzX",
-  "icon": "media/aoh-nuget-icon.png",
+  "icon": "media/aoh-nuget-intellisense.png",
   "license": "MIT",
     "repository": {
     "type": "git",
-    "url": "https://github.com/Abyzz/aoh-nuget-intellisense.git"
+    "url": "https://github.com/abYzzX/aoh-nuget-intellisense.git"
   },
   "bugs": {
-    "url": "https://github.com/Abyzz/aoh-nuget-intellisense/issues"
+    "url": "https://github.com/abYzzX/aoh-nuget-intellisense/issues"
   },
-  "homepage": "https://github.com/Abyzz/aoh-nuget-intellisense#readme",
+  "homepage": "https://github.com/abYzzX/aoh-nuget-intellisense#readme",
   "engines": {
     "vscode": "^1.96.0"
   },

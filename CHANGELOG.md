@@ -2,20 +2,20 @@
 
 All notable changes to AOH - NuGet IntelliSense will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project follows [Semantic Versioning](https://semver.org/).
+## 0.1.4
 
-## [Unreleased]
+- Update GitHub links
+- Update icon
 
-### Added
+## 0.1.3
 
-### Changed
+- Marketplace release
+
+## 0.1.2
 
 - Split shared AOH repository rules from NuGet IntelliSense-specific agent and extension design documentation.
-### Fixed
 
-## [0.1.0] - 2026-09-09
-
-### Added
+## 0.1.1
 
 - NuGet package ID completion for `PackageReference` and `PackageVersion` declarations.
 - NuGet package version completion with descending version ordering.
